@@ -29,6 +29,8 @@ namespace ILanguage
         public SplitPage()
         {
             this.InitializeComponent();
+            Notyfikacje.wczytajDane();
+           // Notyfikacje.wyswietlaj(4);
         }
 
         #region Page state management
@@ -186,5 +188,11 @@ namespace ILanguage
         }
 
         #endregion
+
+        private void magic_clicked(object sender, RoutedEventArgs e)
+        {
+            Notyfikacje.wyswietlaj(3, 15);//3 razy, co 15 sekund
+        }
+
     }
 }

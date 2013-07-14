@@ -51,6 +51,7 @@
                 IsEnabled="{Binding DefaultViewModel.CanGoBack, ElementName=pageRoot}"
                 Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{Binding Title}" Style="{StaticResource PageHeaderTextStyle}"/>
+            <Button x:Name="___No_Name_" Content="Magic" Grid.Column="1" HorizontalAlignment="Left" Height="94" Margin="312,10,0,0" VerticalAlignment="Top" Width="178" Click="magic_clicked"/>
         </Grid>
 
         <!-- Vertical scrolling item list -->
