@@ -18,13 +18,19 @@
             x:Name="itemsViewSource"
             Source="{Binding Items}"
             d:Source="{Binding AllGroups, Source={d:DesignInstance Type=data:SampleDataSource, IsDesignTimeCreatable=True}}"/>
+        <DataTemplate x:Key="BigItemTemplate">
+        	<Grid HorizontalAlignment="Left" Width="405" Height="200">
+        		<Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+        			<Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
+        		</Border>
+        		<StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}" Height="45">
+        			<TextBlock Text="{Binding Title}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextStyle}" Height="60" Margin="15,0,15,0" TextAlignment="Center"/>
+        		</StackPanel>
+        		<StackPanel/>
+        	</Grid>
+        </DataTemplate>
     </Page.Resources>
 
-    <!--
-        This grid acts as a root panel for the page that defines two rows:
-        * Row 0 contains the back button and page title
-        * Row 1 contains the rest of the page layout
-    -->
     <Grid Style="{StaticResource LayoutRootStyle}">
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
@@ -40,11 +46,11 @@
             Grid.RowSpan="2"
             Padding="116,136,116,46"
             ItemsSource="{Binding Source={StaticResource itemsViewSource}}"
-            ItemTemplate="{StaticResource Standard250x250ItemTemplate}"
+            ItemTemplate="{StaticResource BigItemTemplate}"
             SelectionMode="None"
             IsSwipeEnabled="false"
             IsItemClickEnabled="True"
-            ItemClick="ItemView_ItemClick"/>
+            ItemClick="ItemView_ItemClick" FontFamily="Global User Interface"/>
 
         <!-- Vertical scrolling list only used when snapped -->
         <ListView
