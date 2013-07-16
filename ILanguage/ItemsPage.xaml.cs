@@ -59,6 +59,7 @@ namespace ILanguage
             // by passing required information as a navigation parameter
             var groupId = ((SampleDataGroup)e.ClickedItem).UniqueId;
             this.Frame.Navigate(typeof(SplitPage), groupId);
+            //var item = ((SampleDataGroup)e.ClickedItem);
         }
     }
 }
