@@ -12,13 +12,6 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using System.Collections.Specialized;
 
-// The data model defined by this file serves as a representative example of a strongly-typed
-// model that supports notification when members are added, removed, or modified.  The property
-// names chosen coincide with data bindings in the standard item templates.
-//
-// Applications may use this model as a starting point and build on it, or discard it entirely and
-// replace it with something appropriate to their needs.
-
 namespace ILanguage.Data
 {
     /// <summary>

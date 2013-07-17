@@ -106,6 +106,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataModel\Package.cs" />
+    <Compile Include="DataModel\Tag.cs" />
+    <Compile Include="DataModel\TagCollection.cs" />
+    <Compile Include="DataModel\TagSubtype.cs" />
+    <Compile Include="DataModel\TagSubtypeType.cs" />
+    <Compile Include="DataModel\Word.cs" />
     <Compile Include="ItemsPage.xaml.cs">
       <DependentUpon>ItemsPage.xaml</DependentUpon>
     </Compile>

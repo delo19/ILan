@@ -1,6 +1,49 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:ILanguage.Common">
-    
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <DataTemplate x:Key="BigItemTemplate">
+        <Grid HorizontalAlignment="Left" Width="405" Height="200">
+            <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+                <Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
+            </Border>
+            <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}" Height="45">
+                <TextBlock Text="{Binding Title}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextStyle}" Height="60" Margin="15,0,15,0" TextAlignment="Center"/>
+            </StackPanel>
+            <Grid Height="200" Width="405">
+                <Grid HorizontalAlignment="Left" Width="122" Margin="10,10,0,90">
+                    <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+                        <Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
+                    </Border>
+                    <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}" Height="45">
+                        <TextBlock Text="{Binding Title}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextStyle}" Height="60" Margin="15,0,15,0" TextAlignment="Center"/>
+                    </StackPanel>
+                    <Grid HorizontalAlignment="Left" Height="95" Margin="19,10,0,0" VerticalAlignment="Top" Width="104"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Width="122" Margin="137,10,0,90">
+                    <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+                        <Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
+                    </Border>
+                    <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}" Height="45">
+                        <TextBlock Text="{Binding Title}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextStyle}" Height="60" Margin="15,0,15,0" TextAlignment="Center"/>
+                    </StackPanel>
+                    <Grid HorizontalAlignment="Left" Height="95" Margin="19,10,0,0" VerticalAlignment="Top" Width="104"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Width="122" Margin="264,10,0,90">
+                    <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+                        <Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
+                    </Border>
+                    <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}" Height="45">
+                        <TextBlock Text="{Binding Title}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextStyle}" Height="60" Margin="15,0,15,0" TextAlignment="Center"/>
+                    </StackPanel>
+                    <Grid HorizontalAlignment="Left" Height="95" Margin="19,10,0,0" VerticalAlignment="Top" Width="104"/>
+                </Grid>
+            </Grid>
+            <Grid Height="200" Width="405">
+                <Image x:Name="backgroundImage" Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
+            </Grid>
+        </Grid>
+    </DataTemplate>
+
 </ResourceDictionary>
