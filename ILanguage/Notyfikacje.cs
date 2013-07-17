@@ -13,6 +13,8 @@ namespace ILanguage
     {
         static List<String> dane = new List<String>();
         static int i = 0;
+        static Boolean tynks = true;
+        static int liczniki=0;
 
         static ToastTemplateType toastTemplate = ToastTemplateType.ToastText02;
         static XmlDocument toastXml = ToastNotificationManager.GetTemplateContent(toastTemplate);
@@ -34,11 +36,15 @@ namespace ILanguage
             }
         }
 
-        public async static void wyswietlaj(int n, int przerwa){
-            for (int i = 0; i < n; i++)
+        public async static void wyswietlaj(int interval, int time){//czas w minutach
+            time *= 60;//na sekundy
+            liczniki++;
+            int x = liczniki;
+            Boolean wyswietlanie = tynks;
+            for (int i = 0; (i * interval < time) && (x==liczniki) ; i++)
             {
-                wyswietlNotyfikacje();
-                await(Task.Delay(przerwa*1000));
+                    wyswietlNotyfikacje();
+                    await (Task.Delay(interval * 1000));
             }
         }
 

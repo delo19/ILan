@@ -191,7 +191,10 @@ namespace ILanguage
 
         private void magic_clicked(object sender, RoutedEventArgs e)
         {
-            Notyfikacje.wyswietlaj(3, 15);//3 razy, co 15 sekund
+            if (this.Frame != null)
+            {
+                this.Frame.Navigate(typeof(NotificationPage));
+            }
         }
 
     }
